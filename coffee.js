@@ -1,4 +1,4 @@
-alert("Js file loaded successfully");
+// alert("Js file loaded successfully");
 // console.log(displayClock);
 
 let displayClock = document.querySelector(".digitalClock span");
@@ -20,4 +20,5 @@ let dClock = () => {
 };
 
 setInterval(dClock, 1000);
+
 
