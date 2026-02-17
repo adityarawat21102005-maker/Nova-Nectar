@@ -1,0 +1,380 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width:100%;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    padding-top:60px; 
+}
+
+.main{
+    width:100%;
+}
+
+.digitalClock{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    z-index: 9999;
+    font-size: 15px;
+    color: white;
+    background-color: #476071;
+    padding: 8px 10px;
+    border-radius: 5px;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:60px;
+    width:100%;
+    background-color:aqua;
+    padding:0 20px;
+    position:fixed;
+    top:0;
+    z-index:1000;
+    left: -1px;
+}
+
+nav img{
+    height:50px;
+    width:60px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:black;
+    font-size:18px;
+    font-weight:bold;
+    position:relative;
+}
+
+nav ul li a::after{
+    content:'';
+    position:absolute;
+    height:2px;
+    width:0;
+    left:0;
+    bottom:-4px;
+    background:white;
+    transition:0.4s;
+}
+
+nav ul li:hover a::after{
+    width:100%;
+}
+
+/* ================= HERO ================= */
+
+.box1{
+    background-image:url('bg_coffee.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:60px 40px;
+    min-height:100vh;
+}
+
+.content1{
+    max-width:400px;
+    color:white;
+    margin-right: 12%;
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+
+#coffee{
+    width:700px;
+    margin-left: -15%;
+}
+
+#btn1,#btn2{
+    padding:10px 15px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+#btn1{
+    background:black;
+    color:aqua;
+}
+
+#btn2{
+    background:black;
+    color:yellow;
+    margin-left:10px;
+}
+
+
+/* ================= SOCIAL ================= */
+
+.social{
+    position:fixed;
+    right:20px;
+    bottom:100px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    z-index: 9999;
+
+}
+
+.social i{
+    background:white;
+    padding:10px;
+    border-radius:50%;
+    font-size: 30px;
+}
+.fa-instagram{
+    color:#E1306C;
+}
+.fa-whatsapp{
+    color:#25D366;
+}
+#menuBtn{
+    font-size: 26px;
+    cursor: pointer;
+    display: none;   /* desktop pe hide */
+}
+/* ================= ABOUT ================= */
+
+.box2{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    padding:80px 40px;
+    background:aliceblue;
+}
+.content2 h1{
+    font-size:36px;
+    margin-bottom:20px;
+    justify-content: center;
+}
+.content2{
+    width:50%;
+    font-size: 20px;
+}
+
+.coffee_img2 img{
+    width:300px;
+    margin-bottom: 20px;
+}
+
+/* ================= GALLERY ================= */
+
+.box3{
+    background:black;
+    padding:60px 40px;
+    text-align:center;
+    color:white;
+}
+
+.gallery{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.cover{
+    position:relative;
+    width:300px;
+    height:200px;
+    overflow:hidden;
+    border-radius:5px;
+}
+
+.cover img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.5s;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.6);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    opacity:0;
+    transition:0.5s;
+}
+
+.cover:hover .overlay{
+    opacity:1;
+}
+
+.cover:hover img{
+    transform:scale(1.1);
+}
+
+/* ================= FAQ ================= */
+
+.box4{
+    background:#102e66c0;
+    padding:60px 20px;
+}
+.faqMid{
+    max-width: 800px;
+    margin: auto;
+    padding: 40px 20px;
+    box-shadow: 0 0 2px 2px #ccc;
+}
+.faqMid h1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.faqInner h2{
+    position: relative;
+    padding-bottom: 20px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.faqInner h2 span{
+    position: absolute;
+    right: 0;
+    font-weight: 500;
+    transition: 0.5s;
+}
+.span-show{
+    transform: rotate(180deg);
+}
+.faqInner  p{
+    margin-bottom: 15px;
+    border-bottom:2px solid #ccc ;
+    display: none;
+    transition: 0.5s;
+   
+}
+.faq-Show{
+    display: block !important;
+}
+/* ================= CONTACT ================= */
+
+.box5{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:100px 20px;
+    position:relative;
+    background:#102e66; /* temporary bg */
+}
+.contact-content{
+    display:flex;
+    gap:50px;
+    width:100%;
+    max-width:1100px;
+}
+
+.Info{
+    flex:1;
+}
+
+.contact-info{
+    flex:1;
+    color:white;
+    font-size:18px;
+    margin-left: 15%;
+    margin-top: 77px;
+}
+
+.contact-info h2{
+    margin-bottom:20px;
+    font-size:28px;
+}
+
+.contact-info p{
+    margin-bottom:15px;
+    
+}
+
+.enterMessage input,
+.enterMessage textarea{
+    width:100%;
+    padding:14px;
+    margin-bottom:15px;
+    border-radius:8px;
+    border:none;
+    outline:none;
+}
+
+#btn{
+    width:100%;
+    padding:14px;
+    border:none;
+    background:#FF5F00;
+    color:white;
+    border-radius:30px;
+    cursor:pointer;
+}
+.contact-left{
+    margin-bottom:30px;
+    color:white;
+     margin-left: 120px;
+}
+ .enterMessage{
+        text-align:left;
+    }
+
+    .enterMessage label{
+        font-size:18px;   /* label ka size bada */
+        font-weight:600;
+        margin-bottom:6px;
+    }
+
+/* ================= FOOTER ================= */
+
+.footer{
+    display:flex;
+    justify-content:space-around;
+    background:#1b1b29;
+    color:white;
+    padding:40px;
+    flex-wrap:wrap;
+}
+
+.footer-content{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.footer ul{
+    list-style:none;
+}
+
+.footer a{
+    color:white;
+    text-decoration:none;
+}
+.footer img{
+    height:50px;
+    width:60px;
+}
