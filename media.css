@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @media (max-width: 768px) {
 
   /* NAVBAR  */
@@ -140,3 +141,92 @@
     gap: 20px;
   }
 }
+=======
+@media (max-width: 768px) {
+
+  /* NAVBAR  */
+  nav{
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  nav ul{
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  nav ul li a{
+    font-size: 16px;
+  }
+
+  /*  HERO SECTION  */
+  .box1{
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 20px 40px;
+  }
+
+  #coffee{
+    width: 100%;
+    max-width: 300px;
+    margin: 160px 20px;
+    margin-right: 100px;
+  }
+
+  .content1{
+    margin: 0;
+    max-width: 100%;
+  }
+
+  /* SOCIAL ICONS */
+  .social{
+    right: 10px;
+    bottom: 50px;
+  }
+
+  .social i{
+    font-size: 20px;
+    padding: 8px;
+  }
+
+  /*  ABOUT SECTION  */
+  .box2{
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .content2{
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .coffee_img2 img{
+    width: 200px;
+  }
+
+  /*  GALLERY  */
+  .cover{
+    width: 90%;
+    height: 200px;
+  }
+
+  /*  CONTACT FORM  */
+  .enterMessage input{
+    width: 100%;
+  }
+
+  #btn{
+    width: 100%;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer{
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+}
+>>>>>>> 429913c5d84ad836bd7832120e1634854af4db1a
